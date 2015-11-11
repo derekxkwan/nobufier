@@ -1,4 +1,4 @@
-#N canvas 136 169 972 789 10;
+#N canvas 83 176 972 789 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-pos 32 float 3;
 #A 0 0.682149 0.117856 0.124999 0.403571 0.903574 0.767861 0.403571
@@ -10,7 +10,7 @@
 #X restore 27 72 graph;
 #X obj 29 25 hsl 640 30 1 32 0 0 empty count empty -2 -8 0 10 -257985
 -1 -1 0 1;
-#N canvas 522 337 450 300 transport 0;
+#N canvas 521 343 450 300 transport 0;
 #X obj 55 9 inlet;
 #X obj 391 32 inlet;
 #X msg 365 148 0;
@@ -18,7 +18,7 @@
 #X obj 360 184 + 1;
 #X obj 310 123 metro 200;
 #X msg 408 168 0;
-#X obj 342 212 < 16;
+#X obj 387 229 < 16;
 #X obj 313 252 sel 0;
 #X obj 294 58 sel 0;
 #X obj 355 71 t b b;
@@ -50,6 +50,7 @@
 -262144 -1 -1 0 256;
 #X text 142 141 BPM;
 #X text 101 170 NUM COUNTS;
+#X msg 213 71 16;
 #X connect 0 0 19 0;
 #X connect 1 0 7 1;
 #X connect 2 0 3 1;
@@ -79,10 +80,13 @@
 #X connect 23 0 9 0;
 #X connect 23 0 27 0;
 #X connect 25 0 26 0;
+#X connect 25 0 34 0;
 #X connect 26 0 19 0;
 #X connect 26 0 30 0;
 #X connect 28 0 5 1;
 #X connect 30 0 19 0;
+#X connect 31 0 7 1;
+#X connect 34 0 31 0;
 #X coords 0 -1 1 1 170 150 1 100 100;
 #X restore 675 28 pd transport;
 #N canvas 467 233 804 697 \$0-sound 0;
